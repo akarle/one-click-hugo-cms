@@ -18,6 +18,15 @@ collections: # A list of collections the CMS should be able to edit
   - name: "pages"
     label: "Pages"
     files:
+      - file: "site/content/items/items.json"
+        label: "Items"
+        name: "items"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Items, name: items, widget: list, fields: [
+              {label: Name, name: name, widget: string},
+              {label: Image, name: image, widget: image},
+              {label: Description, name: description, widget: "text"}]}
       - file: "site/content/_index.md"
         label: "Home Page"
         name: "home"
