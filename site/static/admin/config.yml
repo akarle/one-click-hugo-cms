@@ -16,6 +16,13 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Intro Blurb", name: "description", widget: "text"}
       - {label: "Image", name: "image", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
+  - name: "refs"
+    label: "Refs"
+    folder: "site/content/refs"
+    format: "json"
+    create: true
+    fields:
+        - {label: Title, name: title, widget: relation, collection: post, value_field: title}
   - name: "pages"
     label: "Pages"
     files:
